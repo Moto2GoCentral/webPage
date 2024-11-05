@@ -113,14 +113,8 @@ export const ContainerCards = ({
                 <p className="price-disp">Precio: {item.precio} €</p>
               </div>
               <div className="button-container">
-                <a
-                  className="btn-disp"
-                  href={`https://wa.me/${whatsappNumber}?text=${encodeURIComponent(
-                    `${mensajeWhatsapp}`
-                  )}`}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
+                <a className="btn-disp" onClick={() => alert(`Reservation details:\nStart date: ${formatDate(dates[`start-${index}`]) || "N/A"}\nEnd date: ${formatDate(dates[`end-${index}`]) || "N/A"}`)
+                }>
                   Reservar{" "}
                   <img
                     className="icono-wsp"
